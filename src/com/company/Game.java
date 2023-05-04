@@ -13,7 +13,6 @@ public class Game {
     public static final String cyan = "\u001B[36m";
     public static final String white = "\u001B[37m";
 
-
     public static final String black_background = "\u001B[40m";
     public static final String red_background = "\u001B[41m";
     public static final String green_background = "\u001B[42m";
@@ -23,14 +22,15 @@ public class Game {
     public static final String cyan_background = "\u001B[46m";
     public static final String white_background = "\u001B[47m";
 
-
     public static final String unbold = "\033[0;0m";
     public static final String bold = "\033[0;1m";
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println(bold+yellow+"ROCK PAPER SCISSORS"+reset);
-        System.out.println(purple+"if your choice will equal to enemy choice, game automatically continue and you play again");
+        System.out.println(bold + yellow + "ROCK PAPER SCISSORS" + reset);
+        System.out.println(
+                purple + "if your choice will equal to enemy choice, game automatically continue and you play again");
         System.out.println("type 'rock', 'paper', 'scissors' into the console!");
         /*
          * PRAVIDLA HRY:
@@ -39,11 +39,10 @@ public class Game {
          * rock tupí scissors
          */
 
-
-        System.out.println(bold+yellow+"--------------------------"+reset);
+        System.out.println(bold + yellow + "--------------------------" + reset);
 
         for (int i = 1; i < 4; i++) {
-            System.out.println(bold+white+i);
+            System.out.println(bold + white + i);
         }
 
         String enemyChoice;
@@ -65,35 +64,35 @@ public class Game {
                     enemyChoice = "paper";
                 }
 
-                System.out.println(bold+red+"Enemy choice: "+reset);
-                System.out.println(unbold+red+enemyChoice+reset);
-                System.out.println(bold+green+"Your choice: "+reset);
+                System.out.println(bold + red + "Enemy choice: " + reset);
+                System.out.println(unbold + red + enemyChoice + reset);
+                System.out.println(bold + green + "Your choice: " + reset);
                 playerChoice = sc.nextLine();
 
                 // mechanismus?
                 if (enemyChoice.equals("rock") && playerChoice.equals("scissors")) {
-                    System.out.println(bold+red+"you lost!"+reset);
+                    System.out.println(bold + red + "you lost!" + reset);
 
                 }
                 if (enemyChoice.equals("scissors") && playerChoice.equals("paper")) {
-                    System.out.println(bold+red+"you lost!"+reset);
+                    System.out.println(bold + red + "you lost!" + reset);
 
                 }
                 if (enemyChoice.equals("paper") && playerChoice.equals("rock")) {
-                    System.out.println(bold+red+"you lost!"+reset);
+                    System.out.println(bold + red + "you lost!" + reset);
 
                 }
 
                 if (playerChoice.equals("rock") && enemyChoice.equals("scissors")) {
-                    System.out.println(bold+yellow+"you won!"+reset);
+                    System.out.println(bold + yellow + "you won!" + reset);
 
                 }
                 if (playerChoice.equals("scissors") && enemyChoice.equals("paper")) {
-                    System.out.println(bold+yellow+"you won!"+reset);
+                    System.out.println(bold + yellow + "you won!" + reset);
 
                 }
                 if (playerChoice.equals("paper") && enemyChoice.equals("rock")) {
-                    System.out.println(bold+yellow+"you won!"+reset);
+                    System.out.println(bold + yellow + "you won!" + reset);
                 }
 
                 System.out.println();
@@ -101,7 +100,7 @@ public class Game {
                     || (playerChoice.equals("rock") && enemyChoice.equals("rock"))
                     || (playerChoice.equals("scissors") && enemyChoice.equals("scissors")));
 
-            System.out.println(bold+green+"Do you want to play again? (yes/no)"+reset);
+            System.out.println(bold + green + "Do you want to play again? (yes/no)" + reset);
             playOrEnd = sc.nextLine();
             System.out.println();
         } while (playOrEnd.equals("yes"));
