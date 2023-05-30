@@ -31,7 +31,7 @@ public class Game {
         System.out.println(bold + yellow + "ROCK PAPER SCISSORS" + reset);
         System.out.println(
                 purple + "if your choice will equal to enemy choice, game automatically continue and you play again");
-        System.out.println("type 'rock', 'paper', 'scissors' into the console!");
+        System.out.println("type only 'rock', 'paper', 'scissors' into the console!");
 
         /*
          * PRAVIDLA HRY:
@@ -76,7 +76,7 @@ public class Game {
                     System.out.println(unbold + red + enemyChoice + reset);
                 }
                 System.out.print(bold + green + "Your move: " + reset);
-                playerChoice = sc.nextLine();
+                playerChoice = sc.nextLine().toLowerCase();
 
                 // mechanismus?
                 if (enemyChoice.equals("rock") && playerChoice.equals("scissors")) {
