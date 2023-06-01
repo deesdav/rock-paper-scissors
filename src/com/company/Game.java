@@ -63,7 +63,9 @@ public class Game {
                 }
                 if (randomEnemyChoice == 2) {
                     enemyChoice = "paper";
-                }
+                } 
+                    System.out.print(bold + green + "Your move: " + reset);
+                playerChoice = sc.nextLine().toLowerCase();
 
                 System.out.print(bold + red + "Opponent's move: " + reset);
                 if (enemyChoice.equals("scissors")) {
@@ -75,8 +77,7 @@ public class Game {
                 if (enemyChoice.equals("rock")) {
                     System.out.println(unbold + red + enemyChoice + reset);
                 }
-                System.out.print(bold + green + "Your move: " + reset);
-                playerChoice = sc.nextLine().toLowerCase();
+           
 
                 // mechanismus?
                 if (enemyChoice.equals("rock") && playerChoice.equals("scissors")) {
